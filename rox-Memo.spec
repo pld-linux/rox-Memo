@@ -12,10 +12,10 @@ URL:		http://rox.sourceforge.net/memo.php3
 BuildRequires:	rpm-pythonprov
 Requires:	python-pygtk-gtk
 Requires:	rox-Lib
-%pyrequires_eq  python
+%pyrequires_eq	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define   _appsdir  %{_libdir}/ROX-apps
+%define		_appsdir	%{_libdir}/ROX-apps
 
 %description
 ROX-Memo is a small utility which you can use to store appointments and 'TODO'

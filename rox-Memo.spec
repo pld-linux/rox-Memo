@@ -7,7 +7,7 @@ Version:	1.0.0
 Release:	2
 License:	GPL
 Group:		X11/Applications
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/rox/%{_name}-%{version}.tgz
+Source0:	http://dl.sourceforge.net/rox/%{_name}-%{version}.tgz
 URL:		http://rox.sourceforge.net/memo.php3
 BuildRequires:	rpm-pythonprov
 Requires:	python-pygtk

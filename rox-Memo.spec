@@ -4,14 +4,14 @@ Summary:	ROX-Memo is a simple alarm clock
 Summary(pl):	ROX-Memo jest prostym budzikiem
 Name:		rox-%{_name}
 Version:	1.0.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/rox/%{_name}-%{version}.tgz
 # Source0-md5:	b104d107f24d9a0a98837c213b902fce
 URL:		http://rox.sourceforge.net/memo.php3
 BuildRequires:	rpm-pythonprov
-Requires:	python-pygtk
+Requires:	python-pygtk-gtk
 Requires:	rox-Lib
 %pyrequires_eq  python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

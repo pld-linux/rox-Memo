@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=ROX-Memo
+Comment=Simple alarm clock
+Comment[pl]=Prosty budzik
+Exec=/usr/lib/ROX-apps/Memo/AppRun
+Icon=rox-Memo.png
+Terminal=false
+Type=Application
+Categories=GTK;Utility;
+Encoding=UTF-8
+# vi: encoding=utf-8

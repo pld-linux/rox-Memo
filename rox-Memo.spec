@@ -2,15 +2,16 @@
 Summary:	ROX-Memo is a simple alarm clock
 Summary(pl):	ROX-Memo jest prostym budzikiem
 Name:		rox-%{_name}
-Version:	1.0.0
-Release:	3
-License:	GPL
+Version:	1.9.5
+Release:	1
+License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/rox/%{_name}-%{version}.tgz
-# Source0-md5:	b104d107f24d9a0a98837c213b902fce
+# Source0-md5:	65e6106f6551e2a9151dd0f102341a7d
+Source1:	%{name}.desktop
 URL:		http://rox.sourceforge.net/memo.php3
 Requires:	python-pygtk-gtk
-Requires:	rox-Lib
+Requires:	rox-Lib2
 %pyrequires_eq	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,14 +28,20 @@ listy rzeczy do zrobienia. Program wy¶wietla, w ma³ym oknie, kilka kolejnych
 pozycji. Ponadto mo¿e dawaæ sygna³ d¼wiêkowy lub otworzyæ okno z wiadomo¶ci±.
 
 %prep
-%setup -q -n %{_name}
+%setup -q -n %{_name}-%{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_appsdir}/%{_name}/Help
+install -d $RPM_BUILD_ROOT{%{_appsdir}/%{_name}/{Help,Messages},%{_desktopdir},%{_pixmapsdir}}
 
-install App* *.py $RPM_BUILD_ROOT%{_appsdir}/%{_name}
+cd %{_name}
+
+install App* *.py .DirIcon Options.xml $RPM_BUILD_ROOT%{_appsdir}/%{_name}
 install Help/README $RPM_BUILD_ROOT%{_appsdir}/%{_name}/Help
+install Messages/it.gmo $RPM_BUILD_ROOT%{_appsdir}/%{_name}/Messages
+
+install .DirIcon $RPM_BUILD_ROOT%{_pixmapsdir}/rox-Memo.png
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %py_comp $RPM_BUILD_ROOT%{_appsdir}/%{_name}
 %py_ocomp $RPM_BUILD_ROOT%{_appsdir}/%{_name}
@@ -44,9 +51,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Help/Changes
+%doc %{_name}/Help/Changes
 %attr(755,root,root) %{_appsdir}/%{_name}/AppRun
-%{_appsdir}/%{_name}/AppI*
+%{_appsdir}/%{_name}/*.xml
+%{_appsdir}/%{_name}/.DirIcon
 %{_appsdir}/%{_name}/*.py[co]
 %{_appsdir}/%{_name}/Help
 %dir %{_appsdir}/%{_name}
+%dir %{_appsdir}/%{_name}/Messages
+%lang(it) %{_appsdir}/%{_name}/Messages/it.gmo
+%{_desktopdir}/%{name}.desktop
+%{_pixmapsdir}/*

@@ -1,4 +1,3 @@
-%include  /usr/lib/rpm/macros.python
 %define _name Memo
 Summary:	ROX-Memo is a simple alarm clock
 Summary(pl):	ROX-Memo jest prostym budzikiem

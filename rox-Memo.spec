@@ -53,6 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc %{_name}/Help/Changes
 %attr(755,root,root) %{_appsdir}/%{_name}/AppRun
+%attr(755,root,root) %dir %{_appsdir}
 %{_appsdir}/%{_name}/*.xml
 %{_appsdir}/%{_name}/.DirIcon
 %{_appsdir}/%{_name}/*.py[co]

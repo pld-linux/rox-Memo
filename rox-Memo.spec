@@ -11,6 +11,7 @@ Source0:	http://dl.sourceforge.net/rox/%{_name}-%{version}.tgz
 Source1:	%{name}.desktop
 URL:		http://rox.sourceforge.net/memo.php3
 Requires:	python-pygtk-gtk
+Requires:	rox >= 2.2.0-2
 Requires:	rox-Lib2
 %pyrequires_eq	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -53,7 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc %{_name}/Help/Changes
 %attr(755,root,root) %{_appsdir}/%{_name}/AppRun
-%attr(755,root,root) %dir %{_appsdir}
 %{_appsdir}/%{_name}/*.xml
 %{_appsdir}/%{_name}/.DirIcon
 %{_appsdir}/%{_name}/*.py[co]

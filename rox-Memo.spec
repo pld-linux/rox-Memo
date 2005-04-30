@@ -9,7 +9,7 @@ Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/rox/%{_name}-%{version}.tgz
 # Source0-md5:	65e6106f6551e2a9151dd0f102341a7d
 Source1:	%{name}.desktop
-URL:		http://rox.sourceforge.net/memo.php3
+URL:		http://rox.sourceforge.net/phpwiki/index.php/Memo
 Requires:	python-pygtk-gtk
 Requires:	rox >= 2.2.0-2
 Requires:	rox-Lib2

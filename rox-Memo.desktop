@@ -2,7 +2,7 @@
 Name=ROX-Memo
 Comment=Simple alarm clock
 Comment[pl]=Prosty budzik
-Exec=/usr/lib/ROX-apps/Memo/AppRun
+Exec=/usr/lib/rox/Memo/AppRun
 Icon=rox-Memo.png
 Terminal=false
 Type=Application

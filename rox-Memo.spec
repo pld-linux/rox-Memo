@@ -1,6 +1,6 @@
 %define _name Memo
 Summary:	ROX-Memo is a simple alarm clock
-Summary(pl.UTF-8):   ROX-Memo jest prostym budzikiem
+Summary(pl.UTF-8):	ROX-Memo jest prostym budzikiem
 Name:		rox-%{_name}
 Version:	1.9.5
 Release:	2

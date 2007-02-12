@@ -1,6 +1,6 @@
 %define _name Memo
 Summary:	ROX-Memo is a simple alarm clock
-Summary(pl):	ROX-Memo jest prostym budzikiem
+Summary(pl.UTF-8):   ROX-Memo jest prostym budzikiem
 Name:		rox-%{_name}
 Version:	1.9.5
 Release:	2
@@ -23,10 +23,10 @@ ROX-Memo is a small utility which you can use to store appointments and 'TODO'
 items. It displays the next few entries in a small window, and can also be
 instructed to beep and bring up a window with a message later.
 
-%description -l pl
-ROX-Memo jest ma³ym narzêdziem s³u¿±cym do przechowywania dat spotkañ oraz
-listy rzeczy do zrobienia. Program wy¶wietla, w ma³ym oknie, kilka kolejnych
-pozycji. Ponadto mo¿e dawaæ sygna³ d¼wiêkowy lub otworzyæ okno z wiadomo¶ci±.
+%description -l pl.UTF-8
+ROX-Memo jest maÅ‚ym narzÄ™dziem sÅ‚uÅ¼Ä…cym do przechowywania dat spotkaÅ„ oraz
+listy rzeczy do zrobienia. Program wyÅ›wietla, w maÅ‚ym oknie, kilka kolejnych
+pozycji. Ponadto moÅ¼e dawaÄ‡ sygnaÅ‚ dÅºwiÄ™kowy lub otworzyÄ‡ okno z wiadomoÅ›ciÄ….
 
 %prep
 %setup -q -n %{_name}-%{version}
